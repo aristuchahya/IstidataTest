@@ -59,11 +59,10 @@ public class EmployeeController {
     @GetMapping("/search")
     public ResponseEntity<?> searchByNikOrFullname (@RequestParam(required = false) Long nik, @RequestParam(required = false) String fullName) {
         if (nik == null && (fullName == null || fullName.isEmpty())) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "NIK atau Nama Lengkap harus disertakan");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "NIK or Fullname as required");
         }
 
         List<Employee> employees;
-
 
         if (nik != null) {
             employees = employeeService.searchByNik(nik);
@@ -74,10 +73,10 @@ public class EmployeeController {
         }
 
         if (employees.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Data tidak ditemukan");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Data not found");
         }
 
-        ApiResponse<List<Employee>> response = new ApiResponse<>("Data ditemukan", employees);
+        ApiResponse<List<Employee>> response = new ApiResponse<>("Data Found", employees);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
     }

@@ -12,5 +12,5 @@ import java.util.List;
 public interface EmployeeRepo extends JpaRepository<Employee, Long> {
     List<Employee> findByNik(Long nik);
     List<Employee> findByFullNameContainingIgnoreCase(String fullName);
-//    List<Employee> findByNikAndFullNameContainingIgnoreCase(Long nik, String fullName);
+
 }
