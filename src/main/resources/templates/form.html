@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Karyawan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card w-50">
+        <div class="card-header bg-light d-flex">
+                <img src="../static/img/folder.png" class="img-thumbnail me-3" alt="Thumbnail" style="width: 50px; height: auto;">
+            <div class="d-flex flex-column">
+                <h4 class="mb-0">Aplikasi Data Pribadi</h4>
+                <small class="text-muted">Tambah Data Baru</small>
+            </div>
+
+        </div>
+        <div class="card-body">
+            <form id="dataForm">
+                <!-- NIK -->
+
+                <div class="form-group mb-3">
+                    <label for="nik">NIK</label>
+                    <input type="text" class="form-control" id="nik" placeholder="Masukkan NIK">
+                </div>
+
+
+                <!-- Nama Lengkap -->
+                <div class="form-group mb-3">
+                    <label for="fullName">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Masukkan Nama Lengkap">
+                </div>
+
+                <!-- Jenis Kelamin -->
+                <div class="form-group mb-3">
+                    <label>Jenis Kelamin</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="lakiLaki" value="Laki-laki" checked>
+                        <label class="form-check-label" for="lakiLaki">Laki-laki</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="perempuan" value="Perempuan">
+                        <label class="form-check-label" for="perempuan">Perempuan</label>
+                    </div>
+                </div>
+
+                <!-- Tanggal Lahir -->
+                <div class="form-group mb-3">
+                    <label for="birth">Tanggal Lahir</label>
+                    <input type="date" class="form-control" id="birth" placeholder="dd-MM-yyyy">
+                </div>
+
+            <div class="form-group mb-3">
+                <label for="age">Umur</label>
+                <input type="number" class="form-control" id="age" placeholder="Masukkan umur">
+            </div>
+
+                <!-- Alamat -->
+                <div class="form-group mb-3">
+                    <label for="address">Alamat</label>
+                    <textarea class="form-control" id="address" rows="3" placeholder="Masukkan Alamat"></textarea>
+                </div>
+
+                <!-- Negara -->
+                <div class="form-group">
+                    <label for="country">Negara</label>
+                    <select class="form-control" id="country">
+                        <option>Pilih Negara</option>
+                        <option>Indonesia</option>
+                        <option>Malaysia</option>
+                        <option>Singapura</option>
+                        <!-- Tambahkan negara lainnya -->
+                    </select>
+                </div>
+                <div class="mt-4">
+                    <!-- Tombol Simpan dan Kembali -->
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <a href="index.html">
+                        <button type="button" class="btn btn-secondary">Kembali</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="../static/main.js">
+</script>
+</body>
+</html>
